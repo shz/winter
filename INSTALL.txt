@@ -1,0 +1,5 @@
+winter.py is a totally standalone module, so place it wherever you want.
+
+In the future, I'll include some real install instructions.  Currently I've
+only just ripped it out of another project and thrown the basics together
+on github.
