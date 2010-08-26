@@ -1,5 +1,9 @@
-winter.py is a totally standalone module, so place it wherever you want.
+winter.py is a totally standalone module, so place it wherever you want.  You
+can pick it up and drop it wherever you want, and it'll import just fine.  If
+you're in the mood, you can also install it as you would any other Python
+package by the magic of good old distutils.  Just do
 
-In the future, I'll include some real install instructions.  Currently I've
-only just ripped it out of another project and thrown the basics together
-on github.
+    python winter.py install
+    
+Which is slightly unconventional, I know, but I really want to keep it down to
+a single source file.

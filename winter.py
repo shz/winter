@@ -1,3 +1,4 @@
+#TODO - Let's *not* have silly __doc__ functionality
 """
 Copyright (c) 2010 Patrick Stein, Connectsy Inc.
 
@@ -122,7 +123,7 @@ class MigrationManager(object):
         while rev != self.head:
             #sanity check on the revision
             if not rev in self.revisions:
-                raise Exception, "Dead end revision %s" % rev
+                raise Exception("Dead end revision %s" % rev)
                 
             #grab the revision following the obj's revision
             rev = self.revisions[rev]
@@ -263,9 +264,16 @@ def migrate(name):
     m = Migration()
     managers[name].add(m)
     return m
-    
+
+# Here follows unrelated stuff that should be included with every good
+# Python package:
+#
+#  * Test suite
+#  * Distutils stuff
+import sys
+
 # Test suite
-if __name__ == '__main__':
+if __name__ == '__main__' and len(sys.argv) == 1:
     print 'Testing Winter...'
 
     # This is a pretty minimal test, but it should cover the majority of
@@ -304,3 +312,14 @@ if __name__ == '__main__':
     
     print 'Glorious Sucess'
     
+# Installation
+elif __name__ == '__main__' and sys.argv[1] == 'install':
+    from distutils.core import setup
+    setup(
+        name='Winter',
+        version='0.314',
+        description='Dictionary Migrations',
+        author='Patrick Stein',
+        url='http://github.com/shz/winter',
+        py_modules=['winter'],
+    )
