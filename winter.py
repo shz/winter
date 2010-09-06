@@ -310,7 +310,7 @@ if __name__ == '__main__' and len(sys.argv) == 1:
     # TODO :(
     
     
-    print 'Glorious Sucess'
+    print 'Glorious Success'
     
 # Installation
 elif __name__ == '__main__' and sys.argv[1] == 'install':
